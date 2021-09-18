@@ -108,6 +108,12 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("DirX", currDirection.x);
         anim.SetFloat("DirY", currDirection.y);
     }
+
+    public void increaseSpeed(float value)
+    {
+        movespeed += value;
+        Debug.Log("Speed permanently increased to " + movespeed.ToString());
+    }
     #endregion
 
     #region Attack_functions

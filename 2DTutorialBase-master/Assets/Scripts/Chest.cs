@@ -6,8 +6,8 @@ public class Chest : MonoBehaviour
 {
     #region GameObject_variables
     [SerializeField]
-    [Tooltip("health pack")]
-    private GameObject healthpack;
+    [Tooltip("A potion")]
+    private GameObject potion;
     #endregion
 
     #region Chest_functions
@@ -15,7 +15,7 @@ public class Chest : MonoBehaviour
     IEnumerator DestroyChest()
     {
         yield return new WaitForSeconds(.3f);
-        Instantiate(healthpack, transform.position, transform.rotation);
+        Instantiate(potion, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 
